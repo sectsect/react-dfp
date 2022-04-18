@@ -5,7 +5,7 @@
   "author": "SECT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaanauati/react-dfp.git"
+    "url": "git+https://github.com/sectsect/react-dfp.git"
   },
   "scripts": {
     "watch": "NODE_ENV=production babel --watch js --out-dir lib",
