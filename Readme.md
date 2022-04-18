@@ -1,19 +1,25 @@
-# React DFP &middot; [![Build Status](https://travis-ci.org/jaanauati/react-dfp.svg?branch=master)](https://travis-ci.org/jaanauati/react-dfp) [![](https://img.shields.io/npm/dm/react-dfp.svg?label=DL)](https://github.com/jaanauati/react-dfp) [![Minizipped size](https://img.shields.io/bundlephobia/minzip/react-dfp.svg)](https://github.com/jaanauati/react-dfp) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaanauati/react-dfp/blob/master/LICENSE) [![](https://img.shields.io/npm/dependency-version/react-dfp/peer/react.svg)](https://github.com/jaanauati/react-dfp/blob/master/LICENSE)
+# @sect/react-dfp &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaanauati/react-dfp/blob/master/LICENSE) [![](https://img.shields.io/npm/dependency-version/react-dfp/peer/react.svg)](https://github.com/jaanauati/react-dfp/blob/master/LICENSE)
 
 A React implementation of the google [DFP](https://developers.google.com/doubleclick-gpt/reference "GPT Reference") API. This package is inspired in the awesome library [jquery.dfp](https://github.com/coop182/jquery.dfp.js), and aims to provide its same ease of usage but, of course, taking into consideration the react concepts & lifecycle features.
+
+## 🚨 Why use @sect/react-dfp instead of react-dfp?
+
+Currently, [react-dfp](https://github.com/jaanauati/react-dfp) has the following issues: [Invalid arguments: PubAdsService.refresh([]).](https://github.com/jaanauati/react-dfp/issues/213)  
+
+This package has reverted a commit added in [react-dfp](https://github.com/jaanauati/react-dfp) [v.0.21.0](https://github.com/jaanauati/react-dfp/releases/tag/v0.21.0) to avoid this issue.
 
 ## Installation:
 
 To install just run the following command (no other dependencies are required):
 
 ```bash
-npm install --save react-dfp
+npm install --save @sect/react-dfp
 ```
 
 or
 
 ```bash
-yarn add react-dfp
+yarn add @sect/react-dfp
 ```
 
 You can find more details in the [React-dfp site](https://react-dfp.surge.sh/).
