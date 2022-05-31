@@ -4,9 +4,9 @@ A React implementation of the google [DFP](https://developers.google.com/doublec
 
 ## 🚨 Why use @sect/react-dfp instead of react-dfp?
 
-Currently, [react-dfp](https://github.com/jaanauati/react-dfp) has the following issues: [Invalid arguments: PubAdsService.refresh([]).](https://github.com/jaanauati/react-dfp/issues/213)  
+[react-dfp](https://github.com/jaanauati/react-dfp) in [v.0.21.0](https://github.com/jaanauati/react-dfp/releases/tag/v0.21.0), has the following issues: [Invalid arguments: PubAdsService.refresh([]).](https://github.com/jaanauati/react-dfp/issues/213)  
 
-This package has reverted a commit added in [react-dfp](https://github.com/jaanauati/react-dfp) [v.0.21.0](https://github.com/jaanauati/react-dfp/releases/tag/v0.21.0) to avoid this issue.
+This package temporarily avoids this problem. If the problem is resolved, we recommend using [react-dfp](https://github.com/jaanauati/react-dfp).
 
 ## Installation:
 
