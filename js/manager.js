@@ -358,7 +358,7 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
       this.configureOptions(googletag);
       googletag.cmd.push(() => {
         const pubadsService = googletag.pubads();
-        const slotsToRefreshArray = slots.map(slotId => registeredSlots[slotId].slotId);
+        const slotsToRefreshArray = slots.map(slotId => registeredSlots[slotId].gptSlot);
         pubadsService.refresh(slotsToRefreshArray);
       });
     });
