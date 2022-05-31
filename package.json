@@ -10,7 +10,7 @@
   "scripts": {
     "watch": "NODE_ENV=production babel --watch js --out-dir lib",
     "build": "NODE_ENV=production babel js --out-dir lib",
-    "test": "karma start karma.conf.js 2> /dev/null",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider karma start karma.conf.js 2> /dev/null",
     "clean": "rm ./lib/*.js",
     "eslint": "eslint js 2> /dev/null",
     "dist": "npm run eslint && npm run clean && npm run build && npm run test"
