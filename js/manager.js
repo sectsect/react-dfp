@@ -103,7 +103,8 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
   },
 
   setTargetingArguments(data) {
-    Object.assign(globalTargetingArguments, data);
+    // Object.assign(globalTargetingArguments, data);
+    const targetingArgs = { ...globalTargetingArguments, ...data };
     const availableKeys = Object.keys(registeredSlots);
     availableKeys.forEach((slotId) => {
       registeredSlots[slotId].targetingArguments = data;
@@ -112,9 +113,9 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
       this.getGoogletag().then((googletag) => {
         googletag.cmd.push(() => {
           const pubadsService = googletag.pubads();
-          Object.keys(globalTargetingArguments).forEach((varName) => {
+          Object.keys(targetingArgs).forEach((varName) => {
             if (pubadsService) {
-              pubadsService.setTargeting(varName, globalTargetingArguments[varName]);
+              pubadsService.setTargeting(varName, targetingArgs[varName]);
             }
           });
         });
