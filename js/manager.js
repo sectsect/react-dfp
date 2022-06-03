@@ -102,6 +102,23 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
     }
   },
 
+  clearTargetingArguments(data) {
+    // const targetingArgs = { ...globalTargetingArguments, ...data };
+    // console.log(targetingArgs);
+    if (managerAlreadyInitialized === true) {
+      this.getGoogletag().then((googletag) => {
+        googletag.cmd.push(() => {
+          const pubadsService = googletag.pubads();
+          Object.keys(data).forEach((varName) => {
+            if (pubadsService) {
+              pubadsService.clearTargeting(varName);
+            }
+          });
+        });
+      });
+    }
+  },
+
   setTargetingArguments(data) {
     // Object.assign(globalTargetingArguments, data);
     const targetingArgs = { ...globalTargetingArguments, ...data };
