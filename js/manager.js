@@ -238,6 +238,10 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
       this.getGoogletag().then((googletag) => {
         this.configureInitialOptions(googletag);
         slotsToInitialize.forEach((currentSlotId) => {
+          if (registeredSlots[currentSlotId] === undefined) {
+            return;
+          }
+
           registeredSlots[currentSlotId].loading = false;
 
           googletag.cmd.push(() => {
