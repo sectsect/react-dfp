@@ -227,6 +227,9 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
     availableSlots = availableSlots.filter(
       id => !registeredSlots[id].loading && !registeredSlots[id].gptSlot,
     );
+    if (availableSlots.length === 0) {
+      return Promise.resolve();
+    }
     availableSlots.forEach((slotId) => {
       registeredSlots[slotId].loading = true;
     });
@@ -238,6 +241,10 @@ const DFPManager = Object.assign(new EventEmitter().setMaxListeners(0), {
       this.getGoogletag().then((googletag) => {
         this.configureInitialOptions(googletag);
         slotsToInitialize.forEach((currentSlotId) => {
+          if (registeredSlots[currentSlotId] === undefined) {
+            return;
+          }
+
           registeredSlots[currentSlotId].loading = false;
 
           googletag.cmd.push(() => {
