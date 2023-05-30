@@ -1,0 +1,8 @@
+{
+  "git": {
+    "commitMessage": "chore: bump version to v${version}"
+  },
+  "github": {
+    "release": true
+  }
+}

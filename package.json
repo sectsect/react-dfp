@@ -13,7 +13,8 @@
     "test": "NODE_OPTIONS=--openssl-legacy-provider karma start karma.conf.js 2> /dev/null",
     "clean": "rm ./lib/*.js",
     "eslint": "eslint js 2> /dev/null",
-    "dist": "npm run eslint && npm run clean && npm run build && npm run test"
+    "dist": "npm run eslint && npm run clean && npm run build && npm run test",
+    "release": "release-it"
   },
   "bugs": {
     "url": "https://github.com/sectsect/react-dfp/issues/"
@@ -69,6 +70,7 @@
     "react": "^18.2.0",
     "react-addons-test-utils": ">=15.6.2",
     "react-dom": "^18.2.0",
+    "release-it": "^15.10.3",
     "sinon": "^15.1.0",
     "sinon-chai": "^3.7.0",
     "webpack": "^5.84.1"
